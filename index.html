@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Travelling</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+    <!-- <link rel="stylesheet" href="public/css/style.css" /> -->
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            travel
+        </div>
+        <nav class="header__nav">
+            <a href="#"><img src="/img/icons/whatsapp.svg" alt="Whatsapp"></a>
+            <a href="#"><img src="/img/icons/twitter.svg" alt="Twitter"></a>
+            <a href="#"><img src="/img/icons/facebook.svg" alt="Facebook"></a>
+            <a href="#"><img src="/img/icons/instagram.svg" alt="instagram"></a>
+        </nav>
+        <div class="header__hamburger">
+            <span id="first-line"></span>
+            <span id="second-line"></span>
+            <span id="third-line"></span>
+        </div>
+        <div class="header__menu">
+            <span>Whatsapp</span>
+            <span>Twitter</span>
+            <span>Facebook</span>
+            <span>Instagram</span>
+        </div>
+    </header>
+    <div class="content">
+        <div class="hero">
+            <div class="container">
+                <div class="hero__background"></div>
+                <div class="hero__text">
+                    <h1>Find an inspiration</h1>
+                    <a href="#contact-form" class="hero__button">Contact us</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-background"></div>
+        <div class="about">
+            <div class="container">
+                <div class="about__text">
+                    <h2>About us</h2>
+                    <p class="about__description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque molestias fugit, sunt voluptates doloribus quo, inventore cum eum nobis quam, possimus impedit ipsa mollitia laborum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id iusto quam cupiditate, vel hic dolor eum officiis molestias.
+                    </p>
+                </div>
+                <div class="about__background">
+                </div>
+            </div>
+        </div>
+        <div class="image">
+        </div>
+        <div class="reviews swiper">
+            <h2>Reviews</h2>
+            <div class="container swiper-wrapper">
+                <div class="reviews__review swiper-slide">
+                    <img src="/img/people-1.jpg" class="reviews__photo">
+                    <h3>John M.</h3>
+                    <p class="reviews__description">
+                        Lorem labore et dolore magna aliqua.
+                    </p>
+                </div>
+                <div class="reviews__review swiper-slide">
+                    <img src="/img/people-2.jpg" class="reviews__photo">
+                    <h3>Julia K.</h3>
+                    <p class="reviews__description">
+                        Lorem ipsum dolor sit, amet consectetur.
+                    </p>
+                </div>
+                <div class="reviews__review swiper-slide">
+                    <img src="/img/people-3.jpg" class="reviews__photo">
+                    <h3>Noah R.</h3>
+                    <p class="reviews__description">
+                        Lorem aliquae commodo viverra.
+                    </p>
+                </div>
+                <div class="reviews__review swiper-slide">
+                    <img src="/img/people-4.jpg" class="reviews__photo">
+                    <h3>Emma N.</h3>
+                    <p class="reviews__description">
+                        Magni, repudiandae autem minima facilis soluta ducimus.
+                    </p>
+                </div>
+                <div class="reviews__review swiper-slide">
+                    <img src="/img/people-5.jpg" class="reviews__photo">
+                    <h3>Sophia S.</h3>
+                    <p class="reviews__description">
+                        Incidunt vel veritatis error voluptates accusamus eos.
+                    </p>
+                </div>
+                <div class="reviews__review swiper-slide">
+                    <img src="/img/people-6.jpg" class="reviews__photo">
+                    <h3>Lucas M.</h3>
+                    <p class="reviews__description">
+                        Lorem ipsum dolor sit, amet officia consequatur.
+                    </p>
+                </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div id="contact-form" class="contact">
+            <div class="container">
+                <h2>Contact us</h2>
+                <form  class="contact__form"">
+                    <label for="name"></label>
+                    <input type="text" id="name" placeholder="Your name" required>
+
+                    <label for="email"></label>
+                    <input type="email" id="email" placeholder="Your e-mail" required>
+
+                    <label for="message"></label>
+                    <textarea id="message" placeholder="Message" required></textarea>
+                    
+                    <button class="contact__button" type="submit">submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>© 2022 Find an inspiration</p>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

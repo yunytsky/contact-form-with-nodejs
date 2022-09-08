@@ -1,0 +1,676 @@
+// reset
+@import "reset";
+// _______________________________________
+//fonts
+@import "fonts";
+// _______________________________________
+// animations
+@keyframes appear {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes hide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+// _______________________________________
+// colors
+$violet: #3f3768;
+$light-violet: #483f76;
+$yellow: #f9c16e;
+$gray: #696969;
+$dark-gray: #2d2d2d;
+// _______________________________________
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    @include lato-light;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    overflow-x: hidden;
+}
+
+.content{
+    flex: 1 0 auto;
+    transition: filter .2s, opacity 1s;
+    background-color: #fff;
+    opacity: 0;
+}
+
+.content.active {
+    opacity: 1;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+h1{
+    font-size: 4rem;
+    @include concert-one;
+    letter-spacing: 1.5px;
+    color: $violet;
+}
+
+h2{
+    font-size: 3rem;
+    @include concert-one;
+    color: $violet;
+    text-align: center;
+    margin-bottom: .4em;
+}
+
+h3{
+    @include concert-one;
+    font-size: 2rem;
+    color: $violet;
+}
+
+//header
+.header {
+    flex: 0 0 auto;
+    padding: 1.2em 2.5em 1.2em 4em;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header__logo {
+    user-select: none;
+    @include concert-one;
+    font-size: 2rem;
+    color: $violet;
+    position: relative;
+    &::before{
+        content:'';
+        background-color: $yellow;
+        width: .6em;
+        height: .6em;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        left: -.8em;
+        top: .4em;
+        
+    }
+}
+
+.header__nav {
+    display: block;
+    a{  
+        margin-right: 1.7em;
+        &:last-child{
+            margin-right: 0;
+        }
+        img{
+            padding: 0.2em;
+            width: 2.4rem;
+            &:hover{
+                padding: 0.1em;
+            }
+            &:active {
+                padding: 0.05em;
+            }
+        }
+    }
+}
+
+.header__hamburger {
+    // padding-top: .5em;
+    display: none;
+    cursor: pointer;
+    span{
+        transition: .5s;
+        display: block;
+        width: 2rem;
+        height: .25rem;
+        background-color: $violet;
+        border-radius: 2px;
+        margin-bottom:  .4rem;
+
+        &:last-child{
+            margin-bottom: 0;
+            
+        }
+    }
+}
+
+.header__menu{
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 2.6em;
+    flex-direction: column;
+    display: flex;
+    width: 100vw;
+    height: auto;
+    color: #fff;
+    // border-top-left-radius: 50px;
+    // border-bottom-left-radius: 50%;
+    text-transform: lowercase;
+    @include concert-one;
+    font-size: 1.8rem;
+    background-color: $violet;
+    text-align: center;
+    overflow: hidden;
+    span{
+        padding-bottom: 1.2em;
+        border-bottom: 2px solid #fff;
+        margin-bottom: 1em;
+        &:first-child{
+            padding-top: 1.2em;
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    transform: translateX(100%);
+    display: none;
+}
+
+// ________________________
+//hero
+.hero {
+    width: 100vw;
+    height: auto;
+    margin-bottom: 3em;
+}
+
+
+.hero__background {
+    background: url('../img/hero-background.png') right top/cover no-repeat;
+    flex: 0 1 55%;
+    max-width: 100%;
+    height:  80vh;
+}
+
+.hero__text {
+    background: url('../img/white.png') right top/cover no-repeat;
+    flex: 0 1 45%;
+    padding: 0 4em;
+    text-align: center;
+    text-transform: lowercase;
+    // opacity: 0;
+    // transition: 1s;
+    h1{
+        margin-bottom: .5em;
+    }
+}
+
+// .hero__text.active {
+//     opacity: 1;
+// }
+
+.hero__button{
+    color: $violet;
+    @include lato-regular;
+    border: 2.5px solid $violet;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: .25em 1em;
+    &:hover{
+        color: #fff;
+        background-color: $violet;
+    }
+    &:active{
+        color: #fff;
+        background-color: $light-violet;
+        border: 2.5px solid $light-violet;
+
+    }
+}
+
+.hero-background{
+    background: url('../img/hero-background-mobile.jpg') center/cover no-repeat;
+    width: 100vw;
+    height: 60vh;
+    display: none;
+    margin-bottom: 3em;
+    border-radius: 0% 49% 0% 0% / 30% 30% 70% 70%;
+    
+}
+// ________________________
+//about
+.about {
+    height: auto;
+    margin-bottom: 3em;
+}
+
+.about__text {
+    flex: 1 0 55%;
+    padding: 0 4em;
+    text-align: center;
+    align-self: center;
+}
+
+.about__description{
+    @include lato-light;
+    font-size: 1.6rem;
+    color: $gray;
+}
+.about__background {
+    background: url('../img/about-background.png') left top/cover no-repeat;
+    flex: 0 1 45%;
+    height: 80vh;
+}
+
+// ________________________
+//image
+.image{
+    background: url('../img/background.jpg') 50% 60%/cover no-repeat fixed;
+    height:  80vh;
+    width: 100%;
+    margin-bottom: 3em;
+}
+// ________________________
+//reviews
+
+.reviews {
+    position: relative;
+    text-align: center;
+    margin-bottom: 3em;
+    padding: 2em 0 3em 0;
+    max-width: 85vw;
+    .container{
+        align-items: baseline;
+        scroll-behavior: smooth;
+        justify-content: flex-start;
+
+    }
+    h2{
+        margin-bottom: 1em;
+    }
+}
+
+
+.reviews__review {
+    h3{
+        margin-bottom: .3em;
+    }
+}
+
+
+
+.reviews__photo {
+    width: 250px;
+    border-radius: 50%;
+    border: 2.2px solid $violet;
+    margin-bottom: .5em;
+}
+
+.reviews__description {
+    font-size: 1.4rem;
+    max-width: 70%;
+    margin: 0 auto;
+
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: $violet;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 2.2rem;
+}
+
+.swiper-button-next{
+    right: 0;
+}
+.swiper-button-prev {
+    left: 0;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: $violet;
+}
+
+.swiper-pagination{
+    display: none;
+}
+
+// ________________________
+//contact
+.contact {
+    background: url('../img/background-2.jpg') 20% 60%/cover no-repeat;
+    position: relative;
+    padding: 5em 0;
+    height: auto;
+    .container {
+        flex-direction: column;
+    }
+}
+
+.contact__button {
+    color: #fff;
+    @include lato-regular;
+    background-color: $violet;
+    border: 2.5px solid $violet;
+    font-size: 1.6rem;
+    width: 20vw;
+    margin: 0 auto;
+    text-align: center;
+    padding: .25em 1em;
+    &:hover{
+        color: $violet;
+        border: 2.5px solid $violet;
+        background-color: transparent;    
+    }
+    &:active{
+        color: $light-violet;
+        border: 2.5px solid $light-violet;
+        background-color: transparent;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+        rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    }
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+    font-size: 1.2rem;
+}
+
+
+input, textarea {
+    padding: 1em;
+    margin-bottom: 1em;
+    &:focus {
+        box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+        rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    }
+}
+
+textarea{
+    margin-bottom: 1.5em;
+    height: 30vh;
+}
+// ________________________
+//footer
+.footer{
+    flex: 0 0 auto;
+    color: $dark-gray;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 1em 0;
+    font-size: 1.6rem;
+}
+// ________________________
+//media gets
+
+//width
+
+@media(max-width: 1112px){
+    :root {
+        font-size: 16px;
+    }
+    .hero {
+        height: auto;
+    }
+        
+    .hero__background {
+        background: url('../img/hero-background.png') right 80%/cover no-repeat;
+        height: 70vh;   
+    }
+
+    .about {
+        height: auto;
+    }
+    
+    .about__background {
+        height: 70vh;
+    }
+
+    .reviews {
+        max-width: 95vw;
+    }
+}
+
+@media(max-width: 968px) {
+    :root {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 3.5rem;
+        @include concert-one;
+        letter-spacing: 1.5px;
+        color: $violet;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero {
+        height: auto;
+    }
+
+    .hero__background {
+        height: 60vh;
+
+    }
+    .hero__button {
+        font-size: 1.4rem;
+    }
+    .about {
+        height: auto;
+    }
+    
+    .about__background {
+        height: 60vh;
+    }
+
+    .about__description {
+        font-size: 1.5rem;
+    }
+
+    .header__nav {
+        display: none;
+    }
+    
+    .header__hamburger {
+        display: block;
+    }
+
+    .reviews {
+        max-width: 85vw;
+    }
+
+    .contact__form {
+        width: 50vw;
+        font-size: 1.1rem;
+    }
+    .contact__button {
+        font-size: 1.3rem;
+        width: 15vw;
+    }
+    textarea {
+        height: 20vh;
+    }
+
+    .swiper-pagination {
+        display: block;
+    }
+}
+
+@media(max-width: 768px) {
+    :root {
+        font-size: 12px;
+    }
+    .hero {
+        height: auto;
+    }
+        
+    .hero__background {
+        height: 50vh;
+    }
+
+    .about {
+        height: auto;
+    }
+
+    .about__background {
+        height: 50vh;
+    }
+        
+    .reviews__photo {
+        width: 200px;
+    }
+    .reviews {
+        max-width: 90vw;
+    }
+}
+
+@media(max-width: 648px) {
+    .header{
+        padding: 1.2em 2.8em 1.2em 3.4em;
+    }
+    .hero {
+        height: auto;
+        padding: 0 2em;
+    }
+    .hero-background{
+        display: block;
+    }
+    .hero__background{
+        flex: 0 0 0%;
+    }
+    .hero__text{
+        background: none;
+        padding: 0;
+        margin-top: -2em;
+        flex: 0 1 100%;
+    }
+
+    .about {
+        height: auto;
+    }
+    .about__text {
+        flex: 0 1 100%;
+    }
+    .about__description {
+        font-size: 1.6rem;
+    }
+    .about__background {
+        flex: 0 0 0%;
+    }
+
+    .contact{
+        background: url('../img/background-2-mobile.jpg') left 75%/cover no-repeat;
+    }
+    .contact__form {
+        width: 75vw;
+    }
+    .contact__button {
+        width: 25vw;
+    }
+    textarea {
+        height: 25vh;
+    }
+}
+
+@media(max-width: 384px) {
+    .reviews {
+        max-width: 95vw;
+    }
+    .contact__button {
+        font-size: 1.3rem;
+        width: 30vw;
+        padding: .25em .5em;
+    }
+}
+
+@media(min-width: 2200px) {
+    :root {
+        font-size: 24px;
+    }
+    .hero__background {
+        height: 100vh;
+    }
+
+    .about__background {
+        height: 100vh;
+    }
+
+    .reviews__photo {
+        width: 300px;
+    }
+
+    .contact {
+        background: url('../img/background-2-mobile.jpg') left 75%/cover no-repeat;
+    }
+}
+
+//height
+@media(max-height: 560px){
+    .hero__background{
+        height: 90vh;
+    }
+    .about__background{
+        height: 90vh;
+    }
+}
+@media(min-height: 900px) and (max-width: 1200px) {
+    .hero__background {
+        height: 70vh;
+    }
+
+    .about__background {
+        height: 70vh;
+    }
+
+    .image {
+        height: 70vh;
+    }
+}
+
+@media(min-height: 1000px) and (max-width: 1200px) {
+    .hero__background {
+        height: 35vh;
+    }
+
+    .about__background {
+        height: 35vh;
+    }
+    .header__menu {
+        span {
+            padding-bottom: 2em;
+            border-bottom: 2px solid #fff;
+            margin-bottom: 2em;
+    
+            &:first-child {
+                padding-top: 2em;
+            }
+    
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .image {
+        height: 60vh;
+    }
+
+}
+
+
+
+//check some other screen resolutions and test website
+//animations
