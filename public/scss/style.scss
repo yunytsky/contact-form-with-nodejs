@@ -29,6 +29,7 @@ $yellow: #f9c16e;
 $gray: #696969;
 $dark-gray: #2d2d2d;
 // _______________________________________
+
 html{
     scroll-behavior: smooth;
 }
@@ -77,7 +78,7 @@ h3{
     font-size: 2rem;
     color: $violet;
 }
-
+// _______________________________________
 //header
 .header {
     flex: 0 0 auto;
@@ -105,7 +106,6 @@ h3{
         position: absolute;
         left: -.8em;
         top: .4em;
-        
     }
 }
 
@@ -130,7 +130,6 @@ h3{
 }
 
 .header__hamburger {
-    // padding-top: .5em;
     display: none;
     cursor: pointer;
     span{
@@ -159,8 +158,6 @@ h3{
     width: 100vw;
     height: auto;
     color: #fff;
-    // border-top-left-radius: 50px;
-    // border-bottom-left-radius: 50%;
     text-transform: lowercase;
     @include concert-one;
     font-size: 1.8rem;
@@ -182,7 +179,7 @@ h3{
     display: none;
 }
 
-// ________________________
+// _______________________________________
 //hero
 .hero {
     width: 100vw;
@@ -204,16 +201,10 @@ h3{
     padding: 0 4em;
     text-align: center;
     text-transform: lowercase;
-    // opacity: 0;
-    // transition: 1s;
     h1{
         margin-bottom: .5em;
     }
 }
-
-// .hero__text.active {
-//     opacity: 1;
-// }
 
 .hero__button{
     color: $violet;
@@ -243,7 +234,7 @@ h3{
     border-radius: 0% 49% 0% 0% / 30% 30% 70% 70%;
     
 }
-// ________________________
+// _______________________________________
 //about
 .about {
     height: auto;
@@ -268,7 +259,7 @@ h3{
     height: 80vh;
 }
 
-// ________________________
+// _______________________________________
 //image
 .image{
     background: url('../img/background.jpg') 50% 60%/cover no-repeat fixed;
@@ -296,13 +287,11 @@ h3{
     }
 }
 
-
 .reviews__review {
     h3{
         margin-bottom: .3em;
     }
 }
-
 
 
 .reviews__photo {
@@ -344,10 +333,10 @@ h3{
     display: none;
 }
 
-// ________________________
+// _______________________________________
 //contact
 .contact {
-    background: url('../img/background-2.jpg') 20% 60%/cover no-repeat;
+    background: url('../img/contact-background.jpg') 20% 60%/cover no-repeat;
     position: relative;
     padding: 5em 0;
     height: auto;
@@ -401,7 +390,7 @@ textarea{
     margin-bottom: 1.5em;
     height: 30vh;
 }
-// ________________________
+// _______________________________________
 //footer
 .footer{
     flex: 0 0 auto;
@@ -411,8 +400,8 @@ textarea{
     padding: 1em 0;
     font-size: 1.6rem;
 }
-// ________________________
-//media gets
+// _______________________________________
+//break points
 
 //width
 
@@ -425,7 +414,7 @@ textarea{
     }
         
     .hero__background {
-        background: url('../img/hero-background.png') right 80%/cover no-repeat;
+        background: url('/img/hero-background.png') right 80%/cover no-repeat;
         height: 70vh;   
     }
 
@@ -572,7 +561,7 @@ textarea{
     }
 
     .contact{
-        background: url('../img/background-2-mobile.jpg') left 75%/cover no-repeat;
+        background: url('/img/contact-background-mobile.jpg') left 75%/cover no-repeat;
     }
     .contact__form {
         width: 75vw;
@@ -610,10 +599,6 @@ textarea{
 
     .reviews__photo {
         width: 300px;
-    }
-
-    .contact {
-        background: url('../img/background-2-mobile.jpg') left 75%/cover no-repeat;
     }
 }
 
@@ -669,8 +654,3 @@ textarea{
     }
 
 }
-
-
-
-//check some other screen resolutions and test website
-//animations

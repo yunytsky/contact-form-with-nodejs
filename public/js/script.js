@@ -2,8 +2,6 @@ const form = document.querySelector("#contact-form");
 const sender = document.querySelector("#name");
 const email = document.querySelector("#email");
 const message = document.querySelector("#message");
-// const reveal = document.querySelector(".about__text");
-
 const content = document.querySelector(".content");
 const hamburgerButton = document.querySelector(".header__hamburger");
 const firstLine = document.querySelector("#first-line");
@@ -11,7 +9,6 @@ const secondLine = document.querySelector("#second-line");
 const thirdLine = document.querySelector("#third-line");
 const hamburgerMenu = document.querySelector(".header__menu");
 hamburgerMenu.style.display = "none";
-
 
 window.addEventListener("load", reveal)
 
@@ -110,12 +107,3 @@ form.addEventListener("submit", (e) => {
         }
     });
 });
-
-// finish animation course
-// fix the menu (if possible)
-// check higher resolutions
-// test differenet resoltions
-// test on different browsers
-// test the code
-// find a way to connect node js 
-// upload on github

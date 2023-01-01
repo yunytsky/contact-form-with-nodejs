@@ -558,7 +558,7 @@ h3 {
 }
 
 .contact {
-  background: url("../img/background-2.jpg") 20% 60%/cover no-repeat;
+  background: url("../img/contact-background.jpg") 20% 60%/cover no-repeat;
   position: relative;
   padding: 5em 0;
   height: auto;
@@ -648,7 +648,7 @@ textarea {
     height: auto;
   }
   .hero__background {
-    background: url("../img/hero-background.png") right 80%/cover no-repeat;
+    background: url("/img/hero-background.png") right 80%/cover no-repeat;
     height: 70vh;
   }
   .about {
@@ -787,7 +787,7 @@ textarea {
             flex: 0 0 0%;
   }
   .contact {
-    background: url("../img/background-2-mobile.jpg") left 75%/cover no-repeat;
+    background: url("/img/contact-background-mobile.jpg") left 75%/cover no-repeat;
   }
   .contact__form {
     width: 75vw;
@@ -823,9 +823,6 @@ textarea {
   }
   .reviews__photo {
     width: 300px;
-  }
-  .contact {
-    background: url("../img/background-2-mobile.jpg") left 75%/cover no-repeat;
   }
 }
 
