@@ -16,7 +16,6 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-    console.log(req.body);
     const transporter = nodemailer.createTransport({
         host: process.env.HOST,
         port: process.env.MAIL_PORT,
@@ -24,12 +23,15 @@ app.post("/", (req, res) => {
         auth: {
             user: process.env.USER,
             pass: process.env.PASSWORD
+        },
+        tls: {
+            rejectUnauthorized: false
         }
     });
 
     let mailOptions = {
         from: process.env.USER,
-        to: "testcontact225@mailfence.com",
+        to: "krl.lkn@tutanota.com",
         subject: `You have a message from ${req.body.sender} - ${req.body.email}`,
         text: `${req.body.message}`
     };
